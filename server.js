@@ -16,7 +16,7 @@ app.use(
   helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", "https://code.jquery.com/jquery-2.2.1.min.js"],
+      scriptSrc: ["'self'", "trusted-cdn.com"],
       styleSrc: ["'self'"],
     },
   })
@@ -46,7 +46,7 @@ app.use(function (req, res, next) {
 });
 
 //Start our server and tests!
-app.listen(process.env.PORT || 4444, function () {
+app.listen(3000, function () {
   console.log("Listening on port " + process.env.PORT);
   if (process.env.NODE_ENV === "test") {
     console.log("Running Tests...");

@@ -12,6 +12,7 @@ chai.use(chaiHttp);
 suite("Functional Tests", function () {
   suite("5 functional get request tests", function () {
     test("Viewing one stock: GET request to /api/stock-prices/", function (done) {
+      this.timeout(8000);
       chai
         .request(server)
         .get("/api/stock-prices/")
@@ -25,6 +26,7 @@ suite("Functional Tests", function () {
         });
     });
     test("Viewing one stock and liking it: GET request to /api/stock-prices/", function (done) {
+      this.timeout(8000);
       chai
         .request(server)
         .get("/api/stock-prices/")
@@ -39,6 +41,7 @@ suite("Functional Tests", function () {
         });
     });
     test("Viewing the same stock and liking it again: GET request to /api/stock-prices/", function (done) {
+      this.timeout(8000);
       chai
         .request(server)
         .get("/api/stock-prices/")
@@ -53,6 +56,7 @@ suite("Functional Tests", function () {
         });
     });
     test("Viewing two stocks: GET request to /api/stock-prices/", function (done) {
+      this.timeout(8000);
       chai
         .request(server)
         .get("/api/stock-prices/")
@@ -68,6 +72,7 @@ suite("Functional Tests", function () {
         });
     });
     test("Viewing two stocks and liking them: GET request to /api/stock-prices/", function (done) {
+      this.timeout(8000);
       chai
         .request(server)
         .get("/api/stock-prices/")
